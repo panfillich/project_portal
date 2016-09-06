@@ -1,0 +1,36 @@
+---
+ip: "10.0.0.4"
+memory: 2048
+cpus: 1
+hostname: project-portal
+name: project-portal
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "/home/maksim/projects/laravel/project_portal"
+      to: "/home/vagrant/project-portal"
+
+sites:
+    - map: homestead.app
+      to: "/home/vagrant/project-portal/public"
+
+databases:
+    - homestead
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
