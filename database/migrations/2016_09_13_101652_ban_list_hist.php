@@ -33,7 +33,7 @@ class BanListHist extends Migration
             //comment_admin
             $table  ->  string('comment_admin');
             //created_at
-            $table  ->  timestamp('created_at')->nullable();
+            $table  ->  timestamp('created_at');
             //Составной индекс
             $table  ->index(array('id_user', 'id_ban_list_type'));
         });

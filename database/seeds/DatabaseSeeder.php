@@ -4,15 +4,11 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         //php artisan make:seeder BanListType
-        $this->call(BanListType::class);
+        $this -> call(BanListDat::class);
+        $this -> call(ConfSimpleVariableDat::class);
 
     }
 }
